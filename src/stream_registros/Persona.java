@@ -47,4 +47,5 @@ public class Persona {
     public void setApellido2(String apellido2) {
         this.apellido2 = apellido2;
     }
+    
 }
