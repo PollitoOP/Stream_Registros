@@ -75,17 +75,17 @@ public class Registros extends javax.swing.JFrame {
             jLabel3.setForeground(Color.RED);
         }
     }
-    
-    public void ordernarporalfabeto(){  
-        Collections.sort(Mipersona);
-        DefaultListModel<String> model = new DefaultListModel<>();
-        for (String elemento : Mipersona) {
-            model.addElement(elemento); 
-        }
-        listModel.setModel(model);
 
+    public void ordernarporalfabeto(ArrayList<Persona> Mipersona) {
+        
+        Collections.sort(Mipersona);
+       
+        DefaultListModel<String> modeloLista = new DefaultListModel<>();
+        for (String nombre : ) {
+            modeloLista.addElement(nombre);
+        }
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -98,12 +98,13 @@ public class Registros extends javax.swing.JFrame {
         listModel = new javax.swing.JList<>();
         jButton2 = new javax.swing.JButton();
         jLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         Onombre = new javax.swing.JRadioButton();
         Oapellido1 = new javax.swing.JRadioButton();
         Oapellido2 = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -147,8 +148,8 @@ public class Registros extends javax.swing.JFrame {
         jLabel.setBackground(new java.awt.Color(255, 255, 255));
         jLabel.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Constantia", 3, 12)); // NOI18N
@@ -173,6 +174,9 @@ public class Registros extends javax.swing.JFrame {
         Oapellido2.setForeground(new java.awt.Color(0, 0, 0));
         Oapellido2.setText("Apellido 2");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -192,22 +196,23 @@ public class Registros extends javax.swing.JFrame {
                                     .addComponent(jLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(85, 85, 85)
-                                .addComponent(jButton1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(85, 85, 85)
-                                .addComponent(jButton3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(68, 68, 68)
+                                .addGap(75, 75, 75)
                                 .addComponent(Onombre)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(Oapellido1)
-                                .addGap(18, 18, 18)
-                                .addComponent(Oapellido2)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Oapellido2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(85, 85, 85)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton3)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton2)))))))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -225,17 +230,19 @@ public class Registros extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
                             .addComponent(jButton2))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(30, 30, 30)
                         .addComponent(jButton3)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Onombre)
                             .addComponent(Oapellido1)
-                            .addComponent(Oapellido2)))
+                            .addComponent(Oapellido2))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
@@ -275,7 +282,7 @@ public class Registros extends javax.swing.JFrame {
             ListaPersonas();
             long fin = System.currentTimeMillis();
             long tiempo = fin - inicio;
-            jLabel2.setText("Tiempo de busqueda en milisegundos: " + tiempo);
+            jLabel14.setText("Tiempo de carga en milisegundos: " + tiempo);
         } catch (IOException ex) {
             Logger.getLogger(Registros.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -291,14 +298,14 @@ public class Registros extends javax.swing.JFrame {
         if (Onombre.isSelected()) {
             Mipersona.sort((o1, o2) -> o1.getNombre().compareTo(o2.getNombre()));
             ordernarporalfabeto(Mipersona);
-        } else if (Oapellido1.isSelected()) {
+        } else if (Oapellido2.isSelected()) {
             Mipersona.sort((o1, o2) -> o1.getApellido1().compareTo(o2.getApellido1()));
             ordernarporalfabeto(Mipersona);
-        } else if (Oapellido2.isSelected()) {
+        } else if (Oapellido1.isSelected()) {
             Mipersona.sort((o1, o2) -> o1.getApellido2().compareTo(o2.getApellido2()));
             ordernarporalfabeto(Mipersona);
         } else {
-            JOptionPane.showMessageDialog(null, "Selecciona una opción", "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Seleccione una opción", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -346,6 +353,7 @@ public class Registros extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
